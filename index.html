@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>crud</title>
+</head>
+<body>
+<div id="crud">
+<div class="fh">
+    <h2>crud</h2>
+    <p>product management system</p>
+</div>
+
+<div class="inputs">
+<center>
+    <input type="text" placeholder="title" id="title">
+    <div class="pricea">
+<input onkeyup="gettotal()" type="number" placeholder="price" id="price">
+<input onkeyup="gettotal()" type="number" placeholder="taxes" id="taxes">
+<input onkeyup="gettotal()" type="number" placeholder="ads" id="ads">
+<input onkeyup="gettotal()" type="number" placeholder="discount" id="discount">
+<small id="total"></small>
+    </div>
+    <input type="number" placeholder="count" id="count">
+    <input type="text" placeholder="category" id="category">
+    <button id="submit">Create</button>
+    </center>
+</div>
+<div class="outbuts">
+<center>
+<p style= 'margin-top: 10px;'>  </p>
+<input onkeyup="serchdata(this.value)" type="text" placeholder="Search" id="serch">
+<div class="btnserch">
+    <button onclick="getserch(this.id)" id="srechtitle">Search By Title</button>
+    <button onclick="getserch(this.id)" id="srechcategory">Search By category</button>
+</div>
+<br>
+<div id="lblall"></div>
+<div id="deleteall"></div>
+</center>
+<table>
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>taxes</th>
+        <th>ads</th>
+        <th>discount</th>
+        <th>total</th>
+        <th>category</th>
+        <th>Count</th>
+        <th colspan="2">Actions</th>
+    </tr>
+    <tbody id="tbody">
+       
+    </tbody>
+</table>
+<div id="not"></div>
+
+</div>
+</div>
+<br>
+
+<div class="fh">
+    <a href="https://github.com/mohamedfareedsaber" target="_blank">Made BY Mohamed Fareed</a>
+    <a href="https://github.com/adamwassal" target="_blank">Designed BY Adam Wael</a>
+</div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
